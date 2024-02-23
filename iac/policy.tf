@@ -62,8 +62,8 @@ resource "aws_iam_role" "lambda" {
   name               = "ec2-autoscaler-${var.worker_pool_id}"
   assume_role_policy = data.aws_iam_policy_document.assume_lambda_role.json
 
-  inline_policy {
-    name   = "ec2-autoscaler-${var.worker_pool_id}"
-    policy = data.aws_iam_policy_document.lambda_policy.json
-  }
+  # inline_policy {
+  # name   = "ec2-autoscaler-${var.worker_pool_id}"
+  # policy = data.aws_iam_policy_document.lambda_policy.json
+  #}
 }
